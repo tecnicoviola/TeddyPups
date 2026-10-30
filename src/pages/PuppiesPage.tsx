@@ -5,6 +5,7 @@ import { TeddyPuppetSVG } from '../components/pup/TeddyPuppetSVG';
 import { AlreadyGoneHomeSection } from '../components/AlreadyGoneHomeSection';
 import puppiesCatalog from '../data/puppiesCatalog.json';
 import cardHtmlMap from '../data/puppiesCardHtmlMap.json';
+import { resolvePublicAssetUrl, sanitizeGeneratedHtml } from '../utils/mediaAssets';
 
 const FILTER_KEYS = ['origin', 'breed', 'gender', 'collection'];
 
@@ -18,30 +19,6 @@ const BREEDS_LIST = [
 
 const WHATSAPP_HREF = "https://wa.me/971541676733?text=Hi%20TeddyPups!%20I'd%20love%20to%20know%20more%20about%20your%20puppies.";
 
-const normalizeAssetUrl = (value?: string) => {
-  if (!value) return '';
-
-  const decoded = decodeURIComponent(value);
-  const fileName = decoded.split('/').pop()?.split('?')[0] ?? '';
-
-  if (!fileName) return value;
-
-  if (decoded.includes('/media/') || decoded.includes('/_next/image?url=')) {
-    return `/images/${fileName}`;
-  }
-
-  return value;
-};
-
-const normalizeGeneratedCardHtml = (cardHtml: string, pup: any) => {
-  const imageUrl = normalizeAssetUrl(pup?.cover?.url);
-
-  if (!imageUrl || !cardHtml) {
-    return cardHtml;
-  }
-
-  return cardHtml.replace(/\/_next\/image\?url=[^"'\s]+/gi, imageUrl);
-};
 
 export const PuppiesPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -240,7 +217,7 @@ export const PuppiesPage: React.FC = () => {
                 <ul className="tp-sketches mt-8">
                   {filteredPuppies.map((pup: any) => {
                     const cardHtml = (cardHtmlMap as Record<string, string>)[pup.slug];
-                    const normalizedCardHtml = cardHtml ? normalizeGeneratedCardHtml(cardHtml, pup) : '';
+                    const normalizedCardHtml = cardHtml ? sanitizeGeneratedHtml(cardHtml) : '';
 
                     if (normalizedCardHtml) {
                       return (
@@ -261,7 +238,7 @@ export const PuppiesPage: React.FC = () => {
                         >
                           <span className="tp-sketch__frame">
                             <span className="tp-sketch__photo">
-                              {pup.cover?.url && <img src={normalizeAssetUrl(pup.cover.url)} alt={pup.displayName} loading="lazy" decoding="async" />}
+                              {pup.cover?.url && <img src={resolvePublicAssetUrl(pup.cover.url)} alt={pup.displayName} loading="lazy" decoding="async" />}
                             </span>
                             <span className="tp-sketch__sticker font-scrawl">Available</span>
                           </span>

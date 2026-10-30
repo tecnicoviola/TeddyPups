@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import puppiesCatalogData from '../data/puppiesCatalog.json';
 import { PupBuddy } from '../components/pup/PupBuddy';
 import { FullScreenImageViewer, GalleryPhoto } from '../components/FullScreenImageViewer';
+import { resolvePublicAssetUrl } from '../utils/mediaAssets';
 
 export interface PuppyMedia {
   id?: string;
@@ -53,12 +54,8 @@ export interface PuppyCatalogItem {
 const puppiesCatalog = puppiesCatalogData as PuppyCatalogItem[];
 
 export function resolveMediaUrl(url: string): string {
-  if (!url) return '/brand/logo.png';
-  if (url.startsWith('http://') || url.startsWith('https://')) return url;
-  if (url.startsWith('/images/')) return url;
-  const parts = url.split('/');
-  const filename = parts[parts.length - 1];
-  return `/images/${filename}`;
+  const resolved = resolvePublicAssetUrl(url);
+  return resolved || '/brand/logo.png';
 }
 
 export const PuppyDetailPage: React.FC = () => {
