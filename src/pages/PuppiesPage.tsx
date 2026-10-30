@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 import { PupBuddy } from '../components/pup/PupBuddy';
+import { TeddyPuppetSVG } from '../components/pup/TeddyPuppetSVG';
 import { AlreadyGoneHomeSection } from '../components/AlreadyGoneHomeSection';
 import puppiesCatalog from '../data/puppiesCatalog.json';
 import cardHtmlMap from '../data/puppiesCardHtmlMap.json';

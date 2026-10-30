@@ -10,8 +10,6 @@ import { HomeQuestionsSection } from '../components/home/HomeQuestionsSection';
 import { HomeDoorSection } from '../components/home/HomeDoorSection';
 import { PupJourney } from '../components/pup/PupJourney';
 
-const HERO_COPY_HTML = `<p class="tp-hero__note font-scrawl">every puppy is family<svg aria-hidden="true" class="absolute -bottom-2 left-0 h-3 w-full text-toffee" preserveaspectratio="none" viewbox="0 0 220 24"><path d="M4 14c18-10 30 8 48-1s28-9 46 0 30 8 48-1 30-9 48 0 18 2 22 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg></p><h1 class="tp-hero__title font-plush" id="hero-title"><span class="tp-hero__line">Premium teacup</span><span class="tp-hero__line tp-hero__line--2">puppies in Dubai</span></h1><p class="tp-hero__lede">Meet your new best friend in our Dubai showroom, or order a rare miniature breed from trusted breeders worldwide.</p><div class="tp-hero__actions"><a class="btn btn-primary" href="/puppies">View available puppies</a><a class="btn btn-ghost" href="https://wa.me/971541676733?text=Hi%20TeddyPups!%20I'd%20love%20to%20know%20more%20about%20your%20puppies." rel="noopener noreferrer" target="_blank">Enquire on WhatsApp</a></div>`;
-
 export const HomePage: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
@@ -66,10 +64,47 @@ export const HomePage: React.FC = () => {
               }
             >
               <span aria-hidden="true" className="tp-hero__sun"></span>
-              <div
-                className="tp-hero__copy gutter"
-                dangerouslySetInnerHTML={{ __html: HERO_COPY_HTML }}
-              />
+              <div className="tp-hero__copy gutter">
+                <p className="tp-hero__note font-scrawl" style={{ color: '#8e3f15', fontFamily: 'var(--font-hand), "Comic Sans MS", cursive', whiteSpace: 'nowrap' }}>
+                  every puppy is family
+                  <svg
+                    aria-hidden="true"
+                    className="absolute -bottom-2 left-0 h-3 w-full text-toffee"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 220 24"
+                    style={{ color: '#8e3f15' }}
+                  >
+                    <path
+                      d="M4 14c18-10 30 8 48-1s28-9 46 0 30 8 48-1 30-9 48 0 18 2 22 0"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="3"
+                    />
+                  </svg>
+                </p>
+                <h1 className="tp-hero__title font-plush" id="hero-title">
+                  <span className="tp-hero__line">Premium teacup</span>
+                  <span className="tp-hero__line tp-hero__line--2">puppies in Dubai</span>
+                </h1>
+                <p className="tp-hero__lede">
+                  Meet your new best friend in our Dubai showroom, or order a rare miniature breed from trusted breeders worldwide.
+                </p>
+                <div className="tp-hero__actions">
+                  <a className="btn btn-primary" href="/puppies">
+                    View available puppies
+                  </a>
+                  <a
+                    className="btn btn-ghost"
+                    href="https://wa.me/971541676733?text=Hi%20TeddyPups!%20I'd%20love%20to%20know%20more%20about%20your%20puppies."
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Enquire on WhatsApp
+                  </a>
+                </div>
+              </div>
               <HeroStage />
             </section>
           </div>

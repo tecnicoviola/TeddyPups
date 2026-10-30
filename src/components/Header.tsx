@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
       data-scrolled={isScrolled ? "true" : "false"}
     >
       <div className="tp-header__bar gutter">
-        <Link aria-label="TeddyPups U.A.E. — home" className="tp-header__brand" to="/">
+        <Link aria-label="Home" className="tp-header__brand" to="/">
           <img
             alt=""
             className="tp-header__logo"
@@ -62,7 +62,6 @@ export const Header: React.FC = () => {
             src="/brand/logo.png"
             style={{ color: 'transparent' }}
           />
-          <span className="font-plush tp-header__name">TeddyPups</span>
         </Link>
 
         <nav aria-label="Main" className="tp-header__nav">
