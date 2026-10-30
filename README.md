@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🐾 TeddyPups
+# 🐶🐾TeddyPups
 
-**A hand-crafted React recreation of the TeddyPups puppy concierge website — illustrated mascots, scroll-driven storytelling, and a filterable puppy gallery.**
+**A handcrafted React recreation of TeddyPups, featuring illustrated mascots, scroll-driven storytelling, and a filterable puppy gallery.**
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-teddypupps.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://teddypupps.netlify.app/)
 
@@ -20,16 +20,13 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Live Demo](#live-demo)
 - [Features](#features)
 - [Screenshots](#screenshots)
+- [Mascot Gallery](#mascot-gallery)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-- [Environment Variables](#environment-variables)
-- [Available Scripts](#available-scripts)
-- [Pages and Architecture](#pages-and-architecture)
-- [Design and Animation](#design-and-animation)
+- [Architecture](#architecture)
 - [Testing and Build](#testing-and-build)
 - [Development Notes](#development-notes)
 - [Roadmap](#roadmap)
@@ -39,128 +36,194 @@
 
 ## Overview
 
-TeddyPups is an ethical luxury puppy concierge based in Dubai, connecting families with vetted Korean and European puppies. This repository is a **recreation project, not a redesign**. The original website is the reference for visual identity, layout, content hierarchy, and interactions, and the goal is to reproduce them as closely as can be verified.
+TeddyPups is an ethical luxury puppy concierge based in Dubai, connecting families with vetted Korean and European puppies. This repository is a **recreation, not a redesign**: the original website is the reference for visual identity, layout, content hierarchy, and interactions, and the goal is to reproduce them as closely as can be verified.
 
-| | |
-| --- | --- |
-| **Live demo** | https://teddypupps.netlify.app/ |
-| **Reference website** | https://puppy.instabizweb.com/ |
-| **Source code** | https://github.com/tecnicoviola/TeddyPups |
-
-## Live Demo
-
-The recreation is deployed on Netlify: **https://teddypupps.netlify.app/**
+The recreation is deployed on Netlify at [teddypupps.netlify.app](https://teddypupps.netlify.app/).
 
 ## Features
 
-> The list below describes the intended scope of the recreation. See the [Roadmap](#roadmap) for known outstanding work.
-
-<!-- TODO: confirm each feature against src/ and mark it implemented or in progress. -->
-
-### 🏠 Homepage
+### Homepage
 - Hero section with puppy illustration
 - Puppy discovery and imported-puppy content
 - Ways to meet a puppy
 - Puppy journey and delivery explanation with a scroll-linked airplane
 - Puppy passport content
 - Happy Families section
-- Final door / welcome-home scene and footer
+- Final door and welcome-home scene, with the dog's approach synchronised to the door animation
 
-### 🐶 Available Puppies
+### Available Puppies
 - Filter panel with **Where** (Everywhere, Imported, Korean Teacup), **Breed** (Maltipoo, Pomeranian, Poodle, Cavapoo, Shih Tzu) and **Gender** (Boys, Girls)
 - Live result count and a clear/reset control
 - Puppy cards with individual imagery
 - "Already gone home" section
 
-### 📄 Puppy Detail Pages
+### Puppy Detail Pages
 - Puppy-specific details with WhatsApp and Send Enquiry actions
-- Image and video gallery: previous/next controls, counter, synced thumbnails, video playback
+- Image and video gallery with previous/next controls, counter, synced thumbnails, and video playback
 - "What comes with this puppy", health and care information, and "The way home" steps
 - Puppy-specific enquiry form
 
-### ✨ Illustrations and Interaction
-- Illustrated dog mascots with movement, expressions, and contextual speech bubbles
-- Paw-shaped custom cursor
+### Illustration and Interaction
+- Illustrated dog mascots with walking, tail movement, changing expressions, and contextual speech bubbles
+- Mascot reactions on the FAQ, Contact, and Happy Families pages
+- Paw-shaped custom cursor with a transparent background
 - Scroll-triggered animations and transitions
 - Shared header, footer, and navigation across pages
 
-### 📬 Other Pages
+### Other Pages
 - Happy Families, FAQ, and Contact
 
 ## Screenshots
 
-> Placeholders — replace each with a real capture. Suggested location: `docs/screenshots/`.
+> Placeholders. Replace each with a real capture, saved under `docs/screenshots/`.
 
 <table>
   <tr>
     <td align="center" width="50%">
       <b>Homepage</b><br><br>
       <!-- <img src="docs/screenshots/home.png" alt="Homepage" width="100%"> -->
-      <i>📷 Screenshot placeholder</i>
+      <img width="2532" height="1594" alt="image" src="https://github.com/user-attachments/assets/f0735030-4b3f-401f-8f93-843d34edd783" />
     </td>
     <td align="center" width="50%">
       <b>Available Puppies</b><br><br>
-      <!-- <img src="docs/screenshots/puppies.png" alt="Available Puppies" width="100%"> -->
-      <i>📷 Screenshot placeholder</i>
+      <img width="2539" height="1599" alt="image" src="https://github.com/user-attachments/assets/49706ec7-2edc-49a4-8a66-db0958c3920b" />
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Puppy Detail &amp; Gallery</b><br><br>
-      <!-- <img src="docs/screenshots/puppy-detail.png" alt="Puppy detail page" width="100%"> -->
-      <i>📷 Screenshot placeholder</i>
+      <img width="2525" height="1599" alt="image" src="https://github.com/user-attachments/assets/2e6b2b6b-b3a9-4298-9c84-a744c25fedd7" />
     </td>
     <td align="center">
       <b>Enquiry Form</b><br><br>
-      <!-- <img src="docs/screenshots/enquiry.png" alt="Enquiry form" width="100%"> -->
-      <i>📷 Screenshot placeholder</i>
+      <img width="2532" height="1599" alt="image" src="https://github.com/user-attachments/assets/11377f09-d2c7-44a7-8e64-5d8e375a71c9" />
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Mascot &amp; Door Scene</b><br><br>
-      <!-- <img src="docs/screenshots/mascot-door.png" alt="Mascot and door scene" width="100%"> -->
-      <i>📷 Screenshot placeholder</i>
+      <img width="2532" height="1599" alt="image" src="https://github.com/user-attachments/assets/071ec077-ca91-44b6-9aae-ec23962a1127" />
     </td>
     <td align="center">
       <b>Mobile Layout</b><br><br>
-      <!-- <img src="docs/screenshots/mobile.png" alt="Mobile layout" width="40%"> -->
-      <i>📷 Screenshot placeholder</i>
+      <img width="1688" height="1044" alt="image" src="https://github.com/user-attachments/assets/483c9123-f439-4b5f-ab97-bf615452338d" />
     </td>
   </tr>
 </table>
 
-<details>
-<summary><b>Mascot reference captures (currently in the repository root)</b></summary>
-
-<br>
-
-| Contact mascot | FAQ |
-| --- | --- |
-| ![Contact mascot wagging its tail](contact_mascot_tail_wagging.png) | ![FAQ initial state](faq_initial_q.png) |
-| ![FAQ mascot speaking](faq_mascot_speaking.png) | ![FAQ note opened](faq_note_opened_exclamation.png) |
-
-</details>
-
 To enable a placeholder, save your image to the path in its comment and uncomment the `<img>` line.
+
+
+## Mascot Gallery
+
+> Placeholders. Replace each with a real capture, saved under `docs/screenshots/`.
+
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <!-- 1. Contact Mascot -->
+    <td align="center" valign="top" width="50%">
+      <b>Contact Mascot</b><br><br>
+      <img width="300" alt="Contact Mascot"
+        src="https://github.com/user-attachments/assets/34398132-3be6-4211-bebd-b18428f76834" />
+    </td>
+    <!-- 2. FAQ Mascot Speaking -->
+    <td align="center" valign="top" width="50%">
+      <b>FAQ Mascot Speaking</b><br><br>
+      <table cellspacing="0" cellpadding="2">
+        <tr>
+          <td align="center">
+            <img width="160" alt="FAQ mascot speaking 1"
+              src="https://github.com/user-attachments/assets/8d2cace6-5a1f-4f98-8c3a-74dcb83ae4f4" />
+          </td>
+          <td align="center">
+            <img width="160" alt="FAQ mascot speaking 3"
+              src="https://github.com/user-attachments/assets/373fa6e1-cfb3-4f2f-95eb-8818aa624174" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <img width="160" alt="FAQ mascot speaking 2"
+              src="https://github.com/user-attachments/assets/128fa97f-ef1b-4876-a325-63d2fb06b8c1" />
+          </td>
+          <td align="center">
+            <img width="160" alt="FAQ mascot speaking 4"
+              src="https://github.com/user-attachments/assets/d952b7dd-f70a-4309-8371-1af831d77b5d" />
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <!-- 3. Footer States -->
+    <td align="center" valign="top" width="50%">
+      <b>Footer States</b><br><br>
+      <table cellspacing="0" cellpadding="2">
+        <tr>
+          <td align="center">
+            <img width="160" alt="Footer state 1"
+              src="https://github.com/user-attachments/assets/1fc6288c-f16f-4536-94d3-fee19a8a9f93" />
+          </td>
+          <td align="center">
+            <img width="160" alt="Footer state 3"
+              src="https://github.com/user-attachments/assets/5f431af2-4444-49fc-84a5-ffaec5e75df6" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <img width="160" alt="Footer state 2"
+              src="https://github.com/user-attachments/assets/688f0f66-20a5-4d36-be7e-36b89962850e" />
+          </td>
+          <td align="center">
+            <img width="160" alt="Footer state 4"
+              src="https://github.com/user-attachments/assets/4e6fb8f6-6f01-436c-9173-02c709fd46c3" />
+          </td>
+        </tr>
+      </table>
+    </td>
+    <!-- 4. FAQ Initial State -->
+    <td align="center" valign="top" width="50%">
+      <b>FAQ Initial State</b><br><br>
+      <img width="300" alt="FAQ Initial State"
+        src="https://github.com/user-attachments/assets/eb894cfe-99f6-47bd-9501-6f390e1fa775" />
+    </td>
+  </tr>
+</table>
+
+
 
 ## Tech Stack
 
-Verified from `package.json` and `vite.config.ts`:
+<table>
+<tr>
+<td valign="top" width="100%">
+
+**Application**
 
 | Area | Technology |
 | --- | --- |
 | UI library | React 19 |
 | Language | TypeScript 5.7 |
-| Build tool / dev server | Vite 6 with `@vitejs/plugin-react` |
-| Routing | React Router (`react-router-dom` 7) |
+| Routing | React Router 7 |
 | Icons | `lucide-react` |
+
+</td>
+<td valign="top" width="50%">
+
+**Tooling and Hosting**
+
+| Area | Technology |
+| --- | --- |
+| Build / dev server | Vite 6 with `@vitejs/plugin-react` |
 | Class utilities | `clsx`, `tailwind-merge` |
 | Hosting | Netlify |
+| Module format | ES modules |
 
-The project is a private ES module package (`"type": "module"`). `package.json` lists no backend, test framework, or linter.
+</td>
+</tr>
+</table>
 
-<!-- TODO: confirm how styling is implemented (index.html uses classes such as bg-milk / text-cocoa, but no tailwindcss dependency is listed in package.json). -->
+There is no backend, test framework, or linter in the project.
 
 ## Project Structure
 
@@ -172,23 +235,13 @@ TeddyPups/
 ├── src/                  # Application source (entry: src/main.tsx)
 ├── index.html            # Vite HTML entry
 ├── package.json
-├── package-lock.json
 ├── tsconfig.json
-├── vite.config.ts
-└── *.png                 # Mascot reference captures (Contact, FAQ)
+└── vite.config.ts
 ```
 
-- `index.html` mounts the app on `#root`, loads `/src/main.tsx`, and preloads `/brand/logo.png` and web fonts from `/fonts/`.
-- The `@` import alias resolves to `./src`.
-
-<!-- TODO: expand src/ (routes, pages, components, data) and describe docs/ and scripts/. -->
+`index.html` mounts the app on `#root`, loads `/src/main.tsx`, and preloads `/brand/logo.png` and the web fonts from `/fonts/`. The `@` import alias resolves to `./src`.
 
 ## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) 18 or newer (required by Vite 6)
-- npm (a `package-lock.json` is committed)
 
 ### Installation
 
@@ -204,49 +257,48 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000. The dev server also binds to all network interfaces (`host: true`), so you can test on a phone over your local network.
+Open http://localhost:3000. The dev server binds to all network interfaces (`host: true`), so you can also test on a phone over your local network.
 
-## Environment Variables
+### Requirements and scripts
 
-No environment variables or `.env.example` file were found, and none are referenced in `package.json` or `vite.config.ts`. The project runs without a `.env` file.
+<table width="100%">
+<tr>
+<td width="100%" valign="top">
 
-<!-- TODO: if src/ reads import.meta.env values, list their names here. Never commit real secrets. -->
+<strong>Requirement</strong>
+<table width="100%">
+<tr><th>Requirement</th><th>Detail</th></tr>
+<tr><td>Node.js</td><td>18 or newer</td></tr>
+<tr><td>Package manager</td><td>npm</td></tr>
+<tr><td>Environment variables</td><td>None needed</td></tr>
+</table>
 
-## Available Scripts
+</td>
+<td width="50%" valign="top">
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the Vite dev server on port 3000 |
-| `npm run build` | Create a production build (`vite build`) |
-| `npm run preview` | Serve the production build locally (`vite preview`) |
+<strong>Commands</strong>
+<table width="100%">
+<tr><th>Command</th><th>Description</th></tr>
+<tr><td><code>npm run dev</code></td><td>Start the dev server on port 3000</td></tr>
+<tr><td><code>npm run build</code></td><td>Create a production build</td></tr>
+<tr><td><code>npm run preview</code></td><td>Serve the production build locally</td></tr>
+</table>
 
-No `test` or `lint` scripts are defined.
+</td>
+</tr>
+</table>
 
-## Pages and Architecture
+## Architecture
 
-This is a single-page application: `index.html` loads `src/main.tsx`, and client-side routing is handled by `react-router-dom`. The intended routes are Home, Available Puppies, individual puppy detail pages, Happy Families, FAQ, and Contact.
-
-<!-- TODO: replace with the actual route table and key components/data modules from src/. -->
+This is a single-page application: `index.html` loads `src/main.tsx`, and client-side routing is handled by `react-router-dom`. Routes cover Home, Available Puppies, individual puppy detail pages, Happy Families, FAQ, and Contact.
 
 ### Dev image proxy
 
-`vite.config.ts` includes a dev-server-only plugin, `next-image-proxy`. Requests to `/_next/image?url=...` are served from `public/` (falling back to `public/images/<filename>`) with the correct image content type, so image paths copied from the original Next.js site resolve locally. It does not apply to production builds.
-
-## Design and Animation
-
-The recreation relies on illustrated mascots and scroll-linked effects rather than static images. Targeted behaviour includes:
-
-- Dog mascot walking, tail movement, changing expressions, and contextual speech bubbles
-- A scroll-linked airplane in the delivery section
-- A door animation synchronised with the dog's approach on the homepage
-- Mascot reactions on the FAQ, Contact, and Happy Families pages
-- A paw-shaped custom cursor with a transparent background
-
-<!-- TODO: document how these are implemented (components, scroll-progress hooks) once src/ is reviewed. -->
+`vite.config.ts` includes a dev-server-only plugin, `next-image-proxy`. Requests to `/_next/image?url=...` are served from `public/` (falling back to `public/images/<filename>`) with the correct content type, so image paths copied from the original Next.js site resolve locally. It does not apply to production builds.
 
 ## Testing and Build
 
-No automated tests or linter are configured. To verify changes locally:
+To verify changes locally:
 
 ```bash
 npm run build      # confirm the production build succeeds
@@ -270,12 +322,12 @@ Then check manually:
 
 ## Roadmap
 
-**Known outstanding corrections** (from the project summary):
+**Known outstanding corrections**
 
-- [ ] **Homepage speech bubbles** — the dog's `hm?` bubble appears too often. Replace it with a contextual, scroll-synchronised timeline that matches the original, with no overlapping bubbles.
-- [ ] **Dog in the bucket** — the dog sits too low. Raise its face and paws so the head clears the rim, with the rim layered in front.
+- [ ] **Homepage speech bubbles:** the dog's `hm?` bubble appears too often. Replace it with a contextual, scroll-synchronised timeline that matches the original, with no overlapping bubbles.
+- [ ] **Dog in the bucket:** the dog sits too low. Raise its face and paws so the head clears the rim, with the rim layered in front.
 
-**Planned improvements:**
+**Planned improvements**
 
 - [ ] Add curated screenshots to the README
 - [ ] Add a test setup and lint configuration
@@ -290,6 +342,6 @@ Visual design, content, and interaction patterns are based on the original Teddy
 
 <div align="center">
 
-Made with 🐾 by [tecnicoviola](https://github.com/tecnicoviola)
+Made by [tecnicoviola](https://github.com/tecnicoviola)
 
 </div>
