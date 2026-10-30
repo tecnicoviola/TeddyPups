@@ -1,0 +1,26 @@
+{
+  "browser": {
+    "mode": "launch",
+    "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "start_url": {
+    "url": "http://localhost:3000/puppies"
+  },
+  "environment": {
+    "viewport": {
+      "width": 1366,
+      "height": 768,
+      "device_scale_factor": 1
+    }
+  },
+  "capture": {
+    "at_end": ["screenshot", "dom", "url"]
+  },
+  "actions": [
+    {
+      "step_id": "wait_page",
+      "action": "wait_for_timeout",
+      "duration_ms": 3000
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "browser": {
+    "mode": "launch",
+    "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "start_url": {
+    "url": "http://localhost:3000/puppies"
+  },
+  "environment": {
+    "viewport": {
+      "width": 1280,
+      "height": 800,
+      "device_scale_factor": 1
+    }
+  },
+  "capture": {
+    "after_each_step": [
+      "url"
+    ],
+    "at_end": [
+      "url"
+    ]
+  },
+  "actions": [
+    {
+      "step_id": "wait_puppies_page",
+      "action": "wait_for_timeout",
+      "duration_ms": 1000
+    },
+    {
+      "step_id": "click_maltipoo_card",
+      "action": "click",
+      "locator": {
+        "kind": "css",
+        "selector": "a[href='/puppies/maltipoo-max-male']"
+      }
+    },
+    {
+      "step_id": "wait_detail_page",
+      "action": "wait_for_timeout",
+      "duration_ms": 1000
+    },
+    {
+      "step_id": "navigate_to_faq",
+      "action": "click",
+      "locator": {
+        "kind": "css",
+        "selector": "nav[aria-label='Main'] a[href='/faq']"
+      }
+    },
+    {
+      "step_id": "wait_faq_page",
+      "action": "wait_for_timeout",
+      "duration_ms": 1000
+    },
+    {
+      "step_id": "navigate_to_contact",
+      "action": "click",
+      "locator": {
+        "kind": "css",
+        "selector": "nav[aria-label='Main'] a[href='/contact']"
+      }
+    },
+    {
+      "step_id": "wait_contact_page",
+      "action": "wait_for_timeout",
+      "duration_ms": 1000
+    }
+  ]
+}

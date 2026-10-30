@@ -1,0 +1,16 @@
+{
+  "browser": {
+    "mode": "launch",
+    "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "start_url": {
+    "url": "https://puppy.instabizweb.com/puppies"
+  },
+  "actions": [
+    {
+      "step_id": "step1_wait",
+      "action": "wait_for_timeout",
+      "duration_ms": 2000
+    }
+  ]
+}

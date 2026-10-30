@@ -1,0 +1,19 @@
+{
+  "browser": {
+    "mode": "launch",
+    "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "start_url": {
+    "url": "http://localhost:3000"
+  },
+  "actions": [
+    {
+      "step_id": "s1",
+      "action": "click",
+      "locator": {
+        "kind": "css",
+        "selector": "a[href='/puppies']"
+      }
+    }
+  ]
+}

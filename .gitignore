@@ -1,0 +1,31 @@
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+temp_err.txt
+
+# Browser automation and local test profiles
+.chrome_data/
+.chrome_debug_faq/
+.chrome_test_click*/
+.chrome_test_console/
+.chrome_test_profile_*/
+
+# Reference screenshots (local-only)
+scratch_basket_*.jpg
+
+# Operating system files
+.DS_Store
+Thumbs.db
+# Extracted website reference frames and analysis assets
+/reference/
