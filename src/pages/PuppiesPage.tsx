@@ -215,7 +215,9 @@ export const PuppiesPage: React.FC = () => {
                 <ul className="tp-sketches mt-8">
                   {filteredPuppies.map((pup: any) => {
                     const cardHtml = (cardHtmlMap as Record<string, string>)[pup.slug];
-                    if (cardHtml) {
+                    const hasLegacyNextImageMarkup = !!cardHtml && cardHtml.includes('/_next/image');
+
+                    if (cardHtml && !hasLegacyNextImageMarkup) {
                       return (
                         <li
                           key={pup.id || pup.slug}
@@ -223,6 +225,7 @@ export const PuppiesPage: React.FC = () => {
                         />
                       );
                     }
+
                     return (
                       <li key={pup.id || pup.slug}>
                         <a
@@ -233,7 +236,7 @@ export const PuppiesPage: React.FC = () => {
                         >
                           <span className="tp-sketch__frame">
                             <span className="tp-sketch__photo">
-                              {pup.cover?.url && <img src={pup.cover.url} alt={pup.displayName} />}
+                              {pup.cover?.url && <img src={pup.cover.url} alt={pup.displayName} loading="lazy" decoding="async" />}
                             </span>
                             <span className="tp-sketch__sticker font-scrawl">Available</span>
                           </span>
